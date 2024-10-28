@@ -9,11 +9,11 @@ package Constant;
  * @author Admin
  */
 public class CommonConstant {
-    public static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/login_user";
+    public static final String DB_URL = "jdbc:mysql://127.0.0.1:3306";
     public static final String DB_USERNAME = "root";
     public static final String DB_PASSWORD = "2592004";
-    public static final String DB_TABLE_NAME = "users";
-    
+    public static final String DB_TABLE_NAME = "login_user.users";
+    public static final String TABLE_TOUR = "tour.tour_oder";
     
     
     

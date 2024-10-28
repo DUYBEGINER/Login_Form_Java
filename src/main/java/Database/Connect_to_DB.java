@@ -5,6 +5,8 @@
 package Database;
 
 import Constant.CommonConstant;
+import model.User;
+import model.current_User;
 
 import java.sql.*;
 
@@ -47,9 +49,17 @@ public class Connect_to_DB {
             if (!resultSet.isBeforeFirst()){
                 return false;
             }
+
+            //Tạo phiên đăng nhập mới
+            if (resultSet.next()) {
+                int id = resultSet.getInt("user_id");
+                current_User.setUser(new User(id,username,password));
+            }
+
         }catch(Exception e){
             e.printStackTrace();
         }
+
         return true;
     }
 
